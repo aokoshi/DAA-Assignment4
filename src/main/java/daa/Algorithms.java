@@ -10,6 +10,17 @@ public final class Algorithms {
         int distance(String a, String b, Counter counter);
         default int distance(String a, String b) { return distance(a, b, new Counter()); }
     }
+    @FunctionalInterface public interface Search {
+        List<Integer> search(String text, String pattern, Counter counter);
+        default List<Integer> search(String text, String pattern) {
+            return search(text, pattern, new Counter());
+        }
+    }
+    public static final Distance RECURSIVE = Algorithms::recursive;
+    public static final Distance TABLE = Algorithms::table;
+    public static final Distance TWO_ROWS = Algorithms::twoRows;
+    public static final Search NAIVE = Algorithms::naive;
+    public static final Search KMP = Algorithms::kmp;
 
     // State: distance between prefixes of lengths i and j. Base: an empty prefix costs the other length.
     // Transition: equal final characters use (i-1,j-1); otherwise one plus the minimum of deletion, insertion and replacement.

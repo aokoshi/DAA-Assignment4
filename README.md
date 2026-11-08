@@ -28,7 +28,3 @@ This overwrites `results/results.csv`, with five measured runs per configuration
 `REPORT.pdf` is the four-page submission report; `DAA_Assignment4_Pashanov_Yelnur.docx` is its editable version and `REPORT.md` is readable on GitHub. The submitted measurements were collected on Windows using Microsoft OpenJDK 17.0.20.1. The CSV contains 260 measured runs; the JUnit suite contains eight tests.
 
 `work` counts recursive calls, computed DP cells, or character comparisons including KMP preprocessing, depending on the family. See `DESIGN.md` and `REPORT.pdf` for the design and interpretation.
-
-## AI use
-
-OpenAI Codex assisted with implementation, tests, experiment design, analysis and report preparation. The student is responsible for reviewing and understanding the submitted work.
